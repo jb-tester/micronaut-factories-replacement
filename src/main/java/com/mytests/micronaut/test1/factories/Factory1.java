@@ -33,7 +33,9 @@ public class Factory1 {
     }
 
     @Bean(preDestroy = "destroyMe")     // todo: support preDestroy attr completion, validation etc
-    public UseBean1Bean2 bean2(Bean1 b1, @Named("bean22") Bean2 b2) {  // should navigate to the named bean only
+    // should navigate to the named bean only for b2
+    // and to primary bean only for b1
+    public UseBean1Bean2 bean2(Bean1 b1, @Named("bean22") Bean2 b2) {
         return new UseBean1Bean2(b1, b2);
     }
 }

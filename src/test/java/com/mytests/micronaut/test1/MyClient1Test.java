@@ -19,6 +19,6 @@ class MyClient1Test {
     MyClient1 client1;
     @Test
     void home() {
-        assertEquals("b1 replaced bean22", Mono.from(client1.home()).block());
+        assertEquals("b1 replaced bean22 replaced bean32", Mono.from(client1.home()).block());
     }
 }

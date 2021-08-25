@@ -106,7 +106,7 @@
                     </annotationProcessorPaths>
                     <compilerArgs>
                         <arg>-Amicronaut.processing.group=com.mytests.micronaut.test1</arg>
-                        <arg>-Amicronaut.processing.module=micronautinjectionstest</arg>
+                        <!--<arg>-Amicronaut.processing.module=micronautinjectionstest</arg>-->
                     </compilerArgs>
                 </configuration>
             </plugin>

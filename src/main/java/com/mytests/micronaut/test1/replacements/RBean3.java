@@ -2,6 +2,7 @@ package com.mytests.micronaut.test1.replacements;
 
 import com.mytests.micronaut.test1.beans.Bean3;
 import io.micronaut.context.annotation.Replaces;
+import jakarta.inject.Named;
 import jakarta.inject.Singleton;
 
 
@@ -11,9 +12,11 @@ import jakarta.inject.Singleton;
  * Project: micronaut-test1
  * *******************************
  */
+
+@Replaces(bean = Bean3.class, named = "bean32", qualifier = Named.class)
 @Singleton
-@Replaces(bean = Bean3.class, named = "bean32")
-public class RBean3 implements Bean3{
+@Named("bean32")
+public class RBean3 implements Bean3 {
 
     private String id;
 
@@ -25,6 +28,6 @@ public class RBean3 implements Bean3{
 
     @Override
     public void setId(final String id) {
-      this.id = "replaced "+id;
+        this.id = "replaced " + id;
     }
 }

@@ -1,6 +1,7 @@
 package com.mytests.micronaut.test1.beans;
 
-import javax.inject.Singleton;
+
+import jakarta.inject.Singleton;
 
 /**
  * *******************************
@@ -10,7 +11,7 @@ import javax.inject.Singleton;
  */
 @Singleton
 public class Bean3_1 implements Bean3 {
-    private String id="b31";
+    private String id = "b31";
 
     @Override
     public String getId() {

@@ -1,7 +1,7 @@
 package com.mytests.micronaut.test1.beans;
 
-import javax.inject.Named;
-import javax.inject.Singleton;
+import jakarta.inject.Named;
+import jakarta.inject.Singleton;
 
 /**
  * *******************************

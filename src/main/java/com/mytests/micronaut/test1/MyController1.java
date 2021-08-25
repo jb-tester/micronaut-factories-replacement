@@ -22,6 +22,7 @@ public class MyController1 {
     MyProps myProps;
     @Inject
     UseBean1Bean2 useBean1Bean2;
+
     @Inject @Named("bean32")
     Bean3 bean3;
 
