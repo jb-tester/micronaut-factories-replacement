@@ -2,7 +2,8 @@ package com.mytests.micronaut.test1.replacements;
 
 import com.mytests.micronaut.test1.beans.Bean3;
 import io.micronaut.context.annotation.Replaces;
-import javax.inject.Singleton;
+import jakarta.inject.Singleton;
+
 
 /**
  * *******************************

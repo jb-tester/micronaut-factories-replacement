@@ -5,9 +5,9 @@ import com.mytests.micronaut.test1.beans.Bean2_1;
 import com.mytests.micronaut.test1.beans.Bean2_2;
 import io.micronaut.context.annotation.Factory;
 import io.micronaut.context.annotation.Value;
+import jakarta.inject.Named;
+import jakarta.inject.Singleton;
 
-import javax.inject.Named;
-import javax.inject.Singleton;
 
 /**
  * *******************************

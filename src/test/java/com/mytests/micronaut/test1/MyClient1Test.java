@@ -1,9 +1,9 @@
 package com.mytests.micronaut.test1;
 
-import io.micronaut.test.annotation.MicronautTest;
+import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
+import jakarta.inject.Inject;
 import org.junit.jupiter.api.Test;
-
-import javax.inject.Inject;
+import reactor.core.publisher.Mono;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -19,6 +19,6 @@ class MyClient1Test {
     MyClient1 client1;
     @Test
     void home() {
-        assertEquals("b1 replaced bean22",client1.home().blockingGet());
+        assertEquals("b1 replaced bean22", Mono.from(client1.home()).block());
     }
 }

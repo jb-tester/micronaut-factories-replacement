@@ -5,9 +5,9 @@ import com.mytests.micronaut.test1.beans.UseBean1Bean2;
 import com.mytests.micronaut.test1.confProperties.MyProps;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
-import javax.inject.Inject;
-import javax.inject.Named;
 
 /**
  * *******************************

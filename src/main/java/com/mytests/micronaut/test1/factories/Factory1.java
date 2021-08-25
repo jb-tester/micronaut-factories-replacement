@@ -5,9 +5,9 @@ import io.micronaut.context.annotation.Bean;
 import io.micronaut.context.annotation.Factory;
 import io.micronaut.context.annotation.Primary;
 import io.micronaut.context.annotation.Value;
+import jakarta.inject.Named;
+import jakarta.inject.Singleton;
 
-import javax.inject.Named;
-import javax.inject.Singleton;
 
 /**
  * *******************************
@@ -33,7 +33,7 @@ public class Factory1 {
     }
 
     @Bean(preDestroy = "destroyMe")     // todo: support preDestroy attr completion, validation etc
-    public UseBean1Bean2 bean2(Bean1 b1, @Named("bean22") Bean2 b2){
+    public UseBean1Bean2 bean2(Bean1 b1, @Named("bean22") Bean2 b2) {  // should navigate to the named bean only
         return new UseBean1Bean2(b1, b2);
     }
 }

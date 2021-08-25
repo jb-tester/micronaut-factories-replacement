@@ -1,8 +1,9 @@
 package com.mytests.micronaut.test1;
 
+import io.micronaut.core.async.annotation.SingleResult;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.client.annotation.Client;
-import io.reactivex.Single;
+import org.reactivestreams.Publisher;
 
 /**
  * *******************************
@@ -14,6 +15,7 @@ import io.reactivex.Single;
 public interface MyClient1 {
 
     @Get
-    Single<String> home();
+    @SingleResult
+    Publisher<String> home();
 
 }
