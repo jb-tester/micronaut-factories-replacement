@@ -1,17 +1,20 @@
 package com.mytests.micronaut.test1.beans;
 
+import jakarta.inject.Named;
+
 /**
  * *******************************
  * Created by Irina.Petrovskaya on 12/25/2019.
  * Project: micronaut-test1
  * *******************************
  */
-public class UseBean1Bean2 {
+public class UseBean1Bean2Bean3 {
 
     Bean1 bean1;
     Bean2 bean2;
+    Bean3 bean3;
 
-    public UseBean1Bean2(Bean1 bean1, Bean2 bean2) {
+    public UseBean1Bean2Bean3(Bean1 bean1, Bean2 bean2, @Named("bean32") Bean3 bean3) {
         this.bean1 = bean1;
         this.bean2 = bean2;
     }
@@ -24,10 +27,11 @@ public class UseBean1Bean2 {
         return bean1;
     }
 
-    public String getBoth(){
-        return bean1.getId()+" "+bean2.getId();
+    public String getAll() {
+        return bean1.getId() + " " + bean2.getId() + bean3.getId();
     }
-    public void destroyMe(){
+
+    public void destroyMe() {
 
         System.out.println("bean2 is destroyed");
     }
